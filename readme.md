@@ -22,7 +22,18 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 - **Location**: Download and place it under `models/albert_model`.
 - **Source**: From CoUDA project: "Coherence Evaluation via Unified Data Augmentation" (NAACL 2024).
 - **Purpose**: Evaluates the overall logical coherence score of the pyramid.
+  
+## Installation 🛠️
 
+Follow these steps to set up your project environment and get started:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/st165026/Fact-driven-Storytelling-with-LLMs.git
+   cd Fact-driven-Storytelling-with-LLMs
+   pip install -r requirements.txt
+   ```
+   
 ## Setup and Configuration ⚙️
 Configure the necessary API keys before use:
 1. Navigate to the `config` folder.
@@ -34,15 +45,6 @@ To generate argument pyramids:
 2. Set `num_pyramids` to define how many successful pyramids to generate.
 3. Run `main.py`. The system will generate multiple pyramids and select the one with the highest score.
 
-## Installation 🛠️
-
-Follow these steps to set up your project environment and get started:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/st165026/Fact-driven-Storytelling-with-LLMs.git
-   cd Fact-driven-Storytelling-with-LLMs
-   pip install -r requirements.txt
    
 ## Cost and Performance 💰
 - Generation uses GPT-4, costing approximately $1.50 and taking about 4 minutes on a GPU-T4.
