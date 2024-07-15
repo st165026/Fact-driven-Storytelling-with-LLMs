@@ -24,16 +24,11 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 - **Purpose**: Evaluates the overall logical coherence score of the pyramid.
   
 ## Installation 🛠️
+To set up the project environment, execute the following command:
 
-Follow these steps to set up your project environment and get started:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/st165026/Fact-driven-Storytelling-with-LLMs.git
-   cd Fact-driven-Storytelling-with-LLMs
-   pip install -r requirements.txt
-   ```
-   
+```bash
+pip install -r requirements.txt
+```
 ## Setup and Configuration ⚙️
 Configure the necessary API keys before use:
 1. Navigate to the `config` folder.
