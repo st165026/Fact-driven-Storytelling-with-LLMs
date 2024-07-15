@@ -38,6 +38,21 @@ To generate argument pyramids:
 - Generation uses GPT-4, costing approximately $1.50 and taking about 4 minutes on a GPU-T4.
 - Using GPT-3.5 turbo can result in unpredictable quality and may not conform to detailed prompt structures necessary for improvements.
 
+## Citation 🌟
+
+This project was developed by the following individuals from the Technical University of Munich, under the Research Group Social Computing of TUM:
+
+- **Authors:**
+  - Jiaqi Mo
+  - Ying Hua
+  - Xinyan Guo
+
+- **Guidance:**
+  - Miriam Anschütz
+  - Simon Malberg
+
+- **Date:** July 2024
+
 ## Note 📝
 Regular expressions extract claims, arguments, and evidences from GPT-generated content. Format inconsistencies might cause bugs, sometimes requiring a restart of the generation process.
 
