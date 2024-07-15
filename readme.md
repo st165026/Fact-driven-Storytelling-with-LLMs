@@ -34,6 +34,16 @@ To generate argument pyramids:
 2. Set `num_pyramids` to define how many successful pyramids to generate.
 3. Run `main.py`. The system will generate multiple pyramids and select the one with the highest score.
 
+## Installation 🛠️
+
+Follow these steps to set up your project environment and get started:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/st165026/Fact-driven-Storytelling-with-LLMs.git
+   cd Fact-driven-Storytelling-with-LLMs
+   pip install -r requirements.txt
+   
 ## Cost and Performance 💰
 - Generation uses GPT-4, costing approximately $1.50 and taking about 4 minutes on a GPU-T4.
 - Using GPT-3.5 turbo can result in unpredictable quality and may not conform to detailed prompt structures necessary for improvements.
