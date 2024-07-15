@@ -40,18 +40,16 @@ To generate argument pyramids:
 
 ## Citation 🌟
 
-This project was developed by the following individuals from the Technical University of Munich, under the Research Group Social Computing of TUM:
+This project was developed at the **Technical University of Munich** under the **Research Group Social Computing of TUM**, in **July 2024**.
 
-- **Authors:**
-  - Jiaqi Mo
-  - Ying Hua
-  - Xinyan Guo
+| Role        | Names                              |
+|-------------|------------------------------------|
+| **Authors** | Jiaqi Mo, Xinyan Guo, Ying Hua     |
+| **Guidance**| Miriam Anschütz, Simon Malberg     |
 
-- **Guidance:**
-  - Miriam Anschütz
-  - Simon Malberg
+![badge](https://img.shields.io/badge/University-TUM-blue)
+![badge](https://img.shields.io/badge/Year-2024-red)
 
-- **Date:** July 2024
 
 ## Note 📝
 Regular expressions extract claims, arguments, and evidences from GPT-generated content. Format inconsistencies might cause bugs, sometimes requiring a restart of the generation process.
