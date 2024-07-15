@@ -1,0 +1,8 @@
+openai==0.28
+beautifulsoup4
+transformers
+torch
+numpy
+scipy
+spacy
+requests
