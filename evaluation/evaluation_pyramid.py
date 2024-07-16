@@ -27,6 +27,12 @@ model3 = AlbertForSequenceClassification.from_pretrained('models/albert_model/')
 model3 = model3.to(device)
 model3.eval()
 
+# Load Model 4 for computing completeness
+tokenizer4 = DebertaTokenizer.from_pretrained("models/completeness")
+model4 = DebertaForSequenceClassification.from_pretrained("models/completeness")
+model4 = model4.to(device)
+model4.eval()
+
 def calculate(argument_pyramid):
     """
         Calculate and evaluate different metrics of an argument pyramid to determine its effectiveness.
@@ -62,19 +68,28 @@ def calculate(argument_pyramid):
     weighted_local_score = np.average(local_scores, weights=weights)
     coh_score = global_score * (1 - lambda_val) + weighted_local_score * lambda_val
 
+    argument_list = []
+    for argument in parsed_response['arguments']:
+        argument_list.append(argument['title'])
+
+    arguments_string = " ".join(argument_list)
+
+    completeness_score_1 = calculate_completeness(claim, arguments_string, tokenizer=tokenizer4, model=model4)
+
      # Generate questions
     questions = generate_questions(claim)
 
     # Check answers
     compl_scores = check_complet(questions, arguments)
-    completeness_score = sum(compl_scores) / len(questions) if questions else 0
-    completeness_score = np.nanmean(np.nan_to_num(compl_scores))
+    completeness_score_2 = sum(compl_scores) / len(questions) if questions else 0
+    completeness_score_2 = np.nanmean(np.nan_to_num(compl_scores))
 
 
     # Print each question and its score
     for question, score in zip(questions, compl_scores):
         print(f"Question: {question}\nScore: {score}\n")
 
+    completeness_score = min(completeness_score_1, completeness_score_2)
     print(f"""
     +-------------------------------------+
     | Overall completeness score: {completeness_score:.3f}
@@ -157,6 +172,25 @@ def calculate_coh_scores(claim, arguments, tokenizer3, model3, device):
 
     return global_score, local_scores
 
+def calculate_completeness(claim, arguments, tokenizer=tokenizer4, model=model4):
+    # Tokenize the input text
+    inputs = tokenizer(claim, arguments, return_tensors="pt", truncation=True, padding=True, max_length=512)
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    inputs = {key: val.to(device) for key, val in inputs.items()}
+
+    # Make predictions
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    # Get the predicted probabilities
+    probs = torch.nn.functional.softmax(outputs.logits, dim=-1)
+
+    # Probability of being sufficient/complete (class 1)
+    completeness_score = probs[0][1].item()
+
+    return completeness_score
 
 def generate_questions(claim):
     # Construct a prompt that encourages the generation of comprehensive questions
