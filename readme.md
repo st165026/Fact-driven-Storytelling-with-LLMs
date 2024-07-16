@@ -7,21 +7,21 @@ This repository contains the implementation of a system that leverages large lan
 ## Model Weights 📦
 The model weights are hosted on Google Drive due to their size. Access them [here](https://drive.google.com/drive/folders/1UPbiBLuExIKfrYGkbWyj4pBYlNavgjLO?usp=sharing).
 
-### BERT Model 📘
+### BERT Model(relevance) 📘
 - **File**: `model.safetensors`
-- **Location**: Download and place it under `models/bert_model`.
+- **Location**: Download and place it under `models/relevance_model`.
 - **Purpose**: Calculates the relevance score between claims and arguments.
 - **Source**: Fine-tuned from the model available at [ibm/argument_quality_ranking_30k](https://huggingface.co/datasets/ibm/argument_quality_ranking_30k). This fine-tuning was specifically performed using the MACE-P labeling to enhance the model's capability in evaluating the quality of arguments in the context of claims.
 
-### RoBERTa Model 📗
+### RoBERTa Model(support) 📗
 - **File**: `best_model.pt`
-- **Location**: Download and place it under `models/roberta_model`.
+- **Location**: Download and place it under `models/support_model`.
 - **Training**: Preprocess the data from "Evidence Convincingness" dataset http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml to create pos_neg_pairs_train.csv, details in support_model_training/data_preparation. Then apply contrastive learning based on the preprocessed data to fine-tune the RoBERTa-based Model.
 - **Purpose**: Used to assess the support score between arguments and evidences.
 
-### ALBERT Model 📙
+### ALBERT Model(coherence) 📙
 - **File**: `pytorch_model.bin`
-- **Location**: Download and place it under `models/albert_model`.
+- **Location**: Download and place it under `models/coherence_model`.
 - **Source**: From CoUDA project: "Coherence Evaluation via Unified Data Augmentation" (NAACL 2024).
 - **Purpose**: Evaluates the overall logical coherence score of the pyramid.
   
