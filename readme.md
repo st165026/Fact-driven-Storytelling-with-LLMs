@@ -11,6 +11,7 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 - **File**: `model.safetensors`
 - **Location**: Download and place it under `models/bert_model`.
 - **Purpose**: Calculates the relevance score between claims and arguments.
+- **Source**: Fine-tuned from the model available at [ibm/argument_quality_ranking_30k](https://huggingface.co/datasets/ibm/argument_quality_ranking_30k). This fine-tuning was specifically performed using the MACE-P labeling to enhance the model's capability in evaluating the quality of arguments in the context of claims.
 
 ### RoBERTa Model 📗
 - **File**: `best_model.pt`
