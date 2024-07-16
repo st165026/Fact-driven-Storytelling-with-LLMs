@@ -51,7 +51,7 @@ This project was developed at the **Technical University of Munich** under the *
 
 | Role        | Names                              |
 |-------------|------------------------------------|
-| **Authors** | Jiaqi Mo, Xinyan Guo, Ying Hua     |
+| **Authors** | Jiaqi Mo, Ying Hua, Xinyan Guo     |
 | **Guidance**| Miriam Anschütz, Simon Malberg     |
 
 ![badge](https://img.shields.io/badge/University-TUM-blue)
