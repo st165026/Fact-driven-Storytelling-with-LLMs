@@ -24,6 +24,12 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 - **Location**: Download and place it under `models/coherence_model`.
 - **Source**: From CoUDA project: "Coherence Evaluation via Unified Data Augmentation" (NAACL 2024).
 - **Purpose**: Evaluates the overall logical coherence score of the pyramid.
+
+### DeBERTa Model(completeness) 📙
+- **File**: `model_4.safetensors`
+- **Location**: Download and place it under `models/completeness_model`.
+- **Dataset and training**: use dataset from https://aclanthology.org/E17-1092/ to fine-tune a pre-trained DeBERTa model on classification task.
+- **Purpose**: compute a completeness score of the pyramid, indicating whether the claim has sufficient supporting arguments.
   
 ## Installation 🛠️
 To set up the project environment, execute the following command:
