@@ -16,6 +16,7 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 ### RoBERTa Model 📗
 - **File**: `best_model.pt`
 - **Location**: Download and place it under `models/roberta_model`.
+- **Training**: Preprocess the data from "Evidence Convincingness" dataset http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml to create pos_neg_pairs_train.csv, details in support_model_training/data_preparation. Then apply contrastive learning based on the preprocessed data to fine-tune the RoBERTa-based Model.
 - **Purpose**: Used to assess the support score between arguments and evidences.
 
 ### ALBERT Model 📙
