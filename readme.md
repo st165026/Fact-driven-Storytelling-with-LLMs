@@ -7,7 +7,7 @@ This repository contains the implementation of a system that leverages large lan
 ## Model Weights 📦
 The model weights are hosted on Google Drive due to their size. Access them [here](https://drive.google.com/drive/folders/1UPbiBLuExIKfrYGkbWyj4pBYlNavgjLO?usp=sharing).
 
-### BERT Model(relevance) 📘
+### BERT Model(relevance) 📕
 - **File**: `model.safetensors`
 - **Location**: Download and place it under `models/relevance_model`.
 - **Purpose**: Calculates the relevance score between claims and arguments.
@@ -19,7 +19,7 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 - **Training**: Preprocess the data from "Evidence Convincingness" dataset http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml to create pos_neg_pairs_train.csv, details in support_model_training/data_preparation. Then apply contrastive learning based on the preprocessed data to fine-tune the RoBERTa-based Model.
 - **Purpose**: Used to assess the support score between arguments and evidences.
 
-### ALBERT Model(coherence) 📙
+### ALBERT Model(coherence) 📘
 - **File**: `pytorch_model.bin`
 - **Location**: Download and place it under `models/coherence_model`.
 - **Source**: From CoUDA project: "Coherence Evaluation via Unified Data Augmentation" (NAACL 2024).
