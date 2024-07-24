@@ -22,7 +22,7 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 ### ALBERT Model(coherence) 📘
 - **File**: `pytorch_model.bin`
 - **Location**: Download and place it under `models/coherence_model`.
-- **Source**: From CoUDA project: "Coherence Evaluation via Unified Data Augmentation" (NAACL 2024).
+- **Source**: From CoUDA project: "Coherence Evaluation via Unified Data Augmentation"(NAACL 2024) (https://aclanthology.org/2024.naacl-long.55).
 - **Purpose**: Evaluates the overall logical coherence score of the pyramid.
 
 ### DeBERTa Model(completeness) 📙
