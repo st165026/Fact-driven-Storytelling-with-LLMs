@@ -48,6 +48,8 @@ To generate argument pyramids:
 2. Set `num_pyramids` to define how many successful pyramids to generate.
 3. Run `main.py`. The system will generate multiple pyramids and select the one with the highest score.
 
+## Note on API Access ✅
+If you don't have access to Bing or OpenAI APIs, don't worry! You can still follow along with the demonstration of how the final results are generated. Simply check the end of the `Demo.ipynb` notebook where we've provided a detailed walkthrough of the process, so you can see exactly how the output is produced even without API keys.
    
 ## Cost and Performance 💰
 - Generation uses GPT-4, costing approximately $1.50 and taking about 4 minutes on a GPU-T4.
