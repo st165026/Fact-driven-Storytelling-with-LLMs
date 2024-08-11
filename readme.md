@@ -30,7 +30,11 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 - **Location**: Download and place it under `models/completeness_model`.
 - **Dataset and training**: use dataset from https://aclanthology.org/E17-1092/ to fine-tune a pre-trained DeBERTa model on classification task.
 - **Purpose**: compute a completeness score of the pyramid, indicating whether the claim has sufficient supporting arguments.
-  
+
+### Flan-T5-Large Model (Proposition Extraction) 📒
+- **Source**: Derived from the paper "Turning Paragraphs and Sentences into Atomic Facts for Efficient Retrieval" (2024) (https://arxiv.org/pdf/2312.06648). 
+- **Purpose**: Utilized for extracting and generating atomic propositions from documents, enabling more effective and token-efficient retrieval of evidence.
+
 ## Installation 🛠️
 To set up the project environment, execute the following command:
 
