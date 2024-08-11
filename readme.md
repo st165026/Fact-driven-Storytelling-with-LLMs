@@ -2,7 +2,7 @@
 
 ## Overview 📖
 This repository contains the implementation of a system that leverages large language models (LLMs) for generating argument pyramids, focusing on the relevance of claims with arguments, support of arguments with evidences, the overall logical coherence, and the completness with all arguments.
-![Process Overview](./pipeline.png)
+![Process Overview](./pipelines.png)
 
 ## Model Weights 📦 
 The model weights are hosted on Google Drive due to their size. Access them [here](https://drive.google.com/drive/folders/1UPbiBLuExIKfrYGkbWyj4pBYlNavgjLO?usp=sharing).
