@@ -32,7 +32,7 @@ The model weights are hosted on Google Drive due to their size. Access them [her
 - **Purpose**: compute a completeness score of the pyramid, indicating whether the claim has sufficient supporting arguments.
 
 ### Flan-T5-Large Model (evidences extraction) 📔
-- **Source**: Derived from the paper "Turning Paragraphs and Sentences into Atomic Facts for Efficient Retrieval" (2024) (https://arxiv.org/pdf/2312.06648). 
+- **Source**: Derived from the paper "Dense X Retrieval: What Retrieval Granularity Should We Use?" (2024) (https://arxiv.org/pdf/2312.06648). 
 - **Purpose**: Utilized for extracting and generating atomic propositions from documents, enabling more effective and token-efficient retrieval of evidence.
 
 ## Installation 🛠️
