@@ -12,9 +12,6 @@ class ArgEvi(Dataset):
         data = pd.read_csv(file_path)
 
         data = data.values.tolist()
-
-        print(data[0])
-
         self.data = data
             
     def __len__(self):
