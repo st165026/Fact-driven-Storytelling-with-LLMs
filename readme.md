@@ -8,25 +8,25 @@ This repository contains the implementation of a system that leverages large lan
 The model weights are hosted on Google Drive due to their size. Access them [here](https://drive.google.com/drive/folders/1UPbiBLuExIKfrYGkbWyj4pBYlNavgjLO?usp=sharing).
 
 ### BERT Model(relevance) 📕
-- **File**: `model.safetensors`
+- **File**: `relevance/model.safetensors`
 - **Location**: Download and place it under `models/relevance_model`.
 - **Purpose**: Calculates the relevance score between claims and arguments.
 - **Source**: Fine-tuned from the model available at [ibm/argument_quality_ranking_30k](https://huggingface.co/datasets/ibm/argument_quality_ranking_30k). This fine-tuning was specifically performed using the MACE-P labeling to enhance the model's capability in evaluating the quality of arguments in the context of claims.
 
 ### RoBERTa Model(support) 📗
-- **File**: `best_model.pt`
+- **File**: `support/best_model.pt`
 - **Location**: Download and place it under `models/support_model`.
 - **Training**: Preprocess the data from "Evidence Convincingness" dataset http://www.research.ibm.com/haifa/dept/vst/debating_data.shtml to create pos_neg_pairs_train.csv, details in support_model_training/data_preparation. Then apply contrastive learning based on the preprocessed data to fine-tune the RoBERTa-based Model.
 - **Purpose**: Used to assess the support score between arguments and evidences.
 
 ### ALBERT Model(coherence) 📘
-- **File**: `pytorch_model.bin`
+- **File**: `coherence/pytorch_model.bin`
 - **Location**: Download and place it under `models/coherence_model`.
 - **Source**: From CoUDA project: "Coherence Evaluation via Unified Data Augmentation"(NAACL 2024) (https://aclanthology.org/2024.naacl-long.55).
 - **Purpose**: Evaluates the overall logical coherence score of the pyramid.
 
 ### DeBERTa Model(completeness) 📙
-- **File**: `model_4.safetensors`
+- **File**: `completness/model.safetensors`
 - **Location**: Download and place it under `models/completeness_model`.
 - **Dataset and training**: use dataset from https://aclanthology.org/E17-1092/ to fine-tune a pre-trained DeBERTa model on classification task.
 - **Purpose**: compute a completeness score of the pyramid, indicating whether the claim has sufficient supporting arguments.
