@@ -75,4 +75,4 @@ This project was developed at the **Technical University of Munich** under the *
 ## Note ❗
 Regular expressions extract claims, arguments, and evidences from GPT-generated content. Format inconsistencies might cause bugs, sometimes requiring a restart of the generation process.
 
-For detailed methodology and computational requirements, see `Poster.pdf` in this repository.
+For detailed methodology and computational requirements, see `Poster.pdf` and `Report.pdf` in this repository.
